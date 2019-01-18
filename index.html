@@ -21,17 +21,17 @@
          
              <div class="input-information">
                 <label for="name">Full Name</label>
-                <input type="text" id="name" name="user_name"><br>
+                <input type="text" id="name" placeholder="Required" name="user_name" required><br>
              </div>
 
              <div class="input-information">
                 <label for="mail">Email Address</label>
-                <input type="email" id="mail" name="user_email"><br>
+                <input type="email" id="mail" placeholder="Required" name="user_email" required><br>
             </div>
 
              <div class="input-information">  
                 <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="user_phone" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required><br>
+                <input type="tel" id="phone" name="user_phone" placeholder="ex:(xxx)xxx-xxxx" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}"><br>
              </div>      
 
              <div class="input-information">
@@ -46,7 +46,8 @@
 
             <div class="input-information">
                 <label for="state">State</label>
-                <select id="state" name="user_state" >
+                <select id="state" name="user_state">
+                    <option value="" disabled selected>Choose State</option>
                     <option value="AL">Alabama</option>
                     <option value="AK">Alaska</option>
                     <option value="AZ">Arizona</option>
@@ -103,9 +104,9 @@
 
             <div class="input-information">
                 <label for="zip">Zip Code</label>
-                <input type="text" pattern="[0-9]{5}" title="Five digit zip code" id="zip">
+                <input type="text" pattern="[0-9]{5}" name="five_digit_zip_code" id="zip">
             </div>
-            
+
     </fieldset>
    
     <fieldset class="newsletter-information">
@@ -114,17 +115,17 @@
 
         <input type="checkbox" id="html" value="newsletter_html" name="user_newsletter"><label for="html">HTML News</label><br>
     
-        <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter"><label for="html">CSS News</label><br>
+        <input type="checkbox" id="css" value="newsletter_css" name="user_newsletter"><label for="css">CSS News</label><br>
 
-        <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter"><label for="html">Javascript News</label>
+        <input type="checkbox" id="javascript" value="newsletter_javascript" name="user_newsletter"><label for="javascript">Javascript News</label>
 
         <h3 class="newsletter-sub-heading">Newsletter format</h3>
 
         <input type="radio" id="format-html" value="format_html" name="user_format"><label for="format-html">HTML</label><br>
-        <input type="radio" id="format-plain" value="format_plain" name="user_format"><label for="format-html">Plain text</label><br>
+        <input type="radio" id="format-plain" value="format_plain" name="user_format"><label for="format-plain">Plain text</label><br>
 
         <label for="comment" class="comment-label">Other topics you'd like to hear about</label><br>
-        <textarea id="comment" name="user_comment"></textarea>
+        <textarea id="comment" name="user_comment" ></textarea>
     </fieldset>
     <footer>
         <button type="submit">Sign Up</button>
